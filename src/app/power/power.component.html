@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Power Component</title>
+</head>
+<body>
+<fieldset>
+  <legend>PowerComponent</legend>
+  <form (submit)="onSubmit()">
+    Initial Power Level: 
+    <!-- <select name="powerLevel" [(ngModel)]='powerLevel'>
+      <option>1</option>
+      <option>5</option>
+      <option>10</option>
+      <option>15</option>
+      <option>20</option>
+      <option>25</option>
+      <option>30</option>
+      <option>35</option>
+      <option>40</option>
+      <option>45</option>
+      <option>50</option>
+      <option>55</option>
+      <option>60</option>
+      <option>65</option>
+      <option>70</option>
+      <option>75</option>
+      <option>80</option>
+      <option>85</option>
+      <option>90</option>
+      <option>95</option>
+      <option>100</option>
+    </select> -->
+    <input type="number"
+    name="powerLevel"
+    min="1"
+    max="100"
+    [(ngModel)]="powerLevel">
+    <input type='submit' value='Calculate Powers'>
+  </form>
+
+  <div>
+  <app-human [power]=power class='a'></app-human>
+  <app-saiyan [power]=power class='a'></app-saiyan>
+  <app-supersaiyan [power]=power class='a'></app-supersaiyan>
+  <app-supersaiyantwo [power]=power class='a'></app-supersaiyantwo>
+  <app-supersaiyanthree [power]=power class='a'></app-supersaiyanthree>
+  <app-supersaiyanfour [power]=power class='a'></app-supersaiyanfour>
+  </div>
+
+
+</fieldset>
+</body>
+</html>
